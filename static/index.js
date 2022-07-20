@@ -124,7 +124,7 @@ function gameRestart() {
     _gameScore = 0;
     _gameOver = false;
     _gameStart = false;
-    _gameTimeNum = 20;
+    _gameTimeNum = 30;
     GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
     countBlockSize();
     refreshGameLayer(GameLayer[0]);
@@ -343,10 +343,10 @@ function shareText(score) {
         return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
     }
     SubmitResults();
-    if (score <= 30) return '狗屁不是!';
-    if (score <= 60) return '还是狗屁.';
-    if (score <= 100) return '就是狗屁！';
-    if (score <= 150) return '比狗屁还狗屁！';
+    if (score <= 50) return '狗屁不是!';
+    if (score <= 100) return '还是狗屁.';
+    if (score <= 150) return '就是狗屁！';
+    if (score <= 250) return '比狗屁还狗屁！';
     return '你就是老表本人？';
 }
 
